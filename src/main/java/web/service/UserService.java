@@ -1,5 +1,7 @@
 package web.service;
+
 import web.entity.User;
+
 import java.util.List;
 
 public interface UserService {
@@ -10,7 +12,7 @@ public interface UserService {
 
     void saveUser(User user);
 
-    void update(long id,User updateUser);
+    void update(long id, User updateUser);
 
     void delete(Long id);
 }

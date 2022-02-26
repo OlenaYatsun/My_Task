@@ -6,17 +6,14 @@ import web.entity.User;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import javax.transaction.Transactional;
 import java.util.List;
 
 
 @Repository
-@Transactional
-//@SuppressWarnings("unchecked")
 public class UserDAOImpl implements UserDAO {
+
     @PersistenceContext
     private EntityManager entityManager;
-
 
 
     @Override
@@ -40,12 +37,10 @@ public class UserDAOImpl implements UserDAO {
     }
 
 
-
     @Override
     public void delete(Long id) {
         entityManager.remove(showById(id));
     }
-
 
 
     @Override
